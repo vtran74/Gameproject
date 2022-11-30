@@ -1,0 +1,34 @@
+{
+  "Jennifer":{
+    "poses":{
+      "default":"img/VN_chara001_neutral.png",
+      "upset":"img/VN_chara001_happy.png",
+      "angry":,
+    },
+    "name":"Jennifer"
+  },
+  "Sarah":{
+    "poses":{
+      "default":"img/VN_chara001_neutral.png",
+      "upset":"img/VN_chara001_happy.png",
+      "angry":,
+    },
+    "name":"Sarah"
+  },
+
+  "luke":{
+    "poses":{
+      "default":"img/VN_chara002_neutral.png",
+      "upset":"img/VN_chara002_happy.png",
+      "angry":"",
+    },
+    "name":"Luke"
+  },
+  
+  "default":{
+    "poses":{
+    },
+    "name":"cop"
+  },
+
+}

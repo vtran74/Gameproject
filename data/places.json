@@ -1,0 +1,16 @@
+{
+	"Island center" : {
+		"name":"Cray Island Town Center",
+    	"image":"img/VN_scene001.png"
+    }
+	"House" : {
+		"name":"Jay's house",
+    	"image":"img/VN_scene001.png"
+    }
+	"Grocery" : {
+		"name":"Wilson's",
+		"image":"img/VN_scene001.png"
+	} 
+	
+	
+}
