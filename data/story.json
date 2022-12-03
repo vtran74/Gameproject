@@ -2,7 +2,7 @@
 	{
 		"title": "Start",
 		"tags": "",
-		"body": "<<place street>>\n{{bobby,happy}} hiHi welcome to the <b>demo</b>\n{{bobby}} I'll try to show you some of the features that you can use with this template\n{{bobby}} Can we start?\n[[Yes.|explanation]]\n[[No.|awkward_pause]]",
+		"body": "<<place street>>\n{{bobby,happy}} Hi welcome to the <b>demo</b>\n{{bobby}} I'll try to show you some of the features that you can use with this template\n{{bobby}} Can we start?\n[[Yes.|explanation]]\n[[No.|awkward_pause]]",
 		"position": {
 			"x": 615,
 			"y": 109
