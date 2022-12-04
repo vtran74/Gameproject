@@ -1,16 +1,34 @@
 {
-	"Island center" : {
+	"town" : {
 		"name":"Cray Island Town Center",
-    	"image":"img/VN_scene001.png"
-    }
-	"House" : {
+    	"image":"img/street.png"
+    },
+	"house" : {
 		"name":"Jay's house",
-    	"image":"img/VN_scene001.png"
-    }
-	"Grocery" : {
+    	"image":"img/house.png"
+    },
+	"kitchen" : {
+		"name":"Jay's kitchen",
+		"image":"img/kitchen.png" 
+	},
+	"livingRoom" : {
+		"name":"Jay's living room",
+		"image":"img/Livingroom.png"
+	},
+	"grocery" : {
 		"name":"Wilson's",
-		"image":"img/VN_scene001.png"
-	} 
-	
-	
+		"image":"img/store.png"
+	}, 
+	"apartment" : {
+		"name":"Flashback",
+		"image":"img/apartment.png"
+	},
+	"call" : {
+		"name": "Phone",
+		"image":"img/apartment.png"
+	},
+	"screen" : {
+		"name": "Wrong choice",
+		"image": "img/wrong.png"
+	}
 }
