@@ -8,23 +8,23 @@
   },
   "sarah":{
     "poses":{
-      "default":"img/VN_chara001_neutral.png",
-      "upset":"img/VN_chara001_happy.png"
     },
     "name":"Sarah"
   },
+
   "luke":{
     "poses":{
-      "default":"img/VN_chara002_neutral.png"
     },
     "name":"Luke"
   },
+  
   "cop":{
     "poses":{
     },
     "name":"Cray Cop"
   },
-  "narrator":{
+  
+  "default":{
     "poses":{
   },
   "name":"Narration"
