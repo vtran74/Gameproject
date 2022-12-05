@@ -11,20 +11,56 @@
 		"name":"Jay's kitchen",
 		"image":"img/kitchen.png" 
 	},
-	"grocery" : {
-		"name":"Wilson's",
-		"image":"img/street.png"
-	}, 
-	"apartment" : {
-		"name":"Flashback",
+	"dialjay" : {
+		"name":"Dialing Jay",
+		"image":"img/dialingJay.png"
+	},
+	"calljay" : {
+		"name":"Calling Jay",
+		"image":"img/JayCall.png"
+	},
+	"flashback" : {
+		"name":"15 years ago",
+		"image":"img/FlashbackFullImage.png"
+	},
+	"island" : {
+		"name": "Cray Island Beach",
 		"image":"img/ocean.png"
 	},
-	"call" : {
-		"name": "Phone",
-		"image":"img/ocean.png"
+	"callsarah" : {
+		"name":"Calling Sarah",
+		"image":"img/SarahCall.png"
+	},
+	"callluke" : {
+		"name":"Calling Luke",
+		"image":"img/LukeCall.png"
 	},
 	"screen" : {
 		"name": "Wrong choice",
 		"image": "img/wrong.png"
+	},
+	"note" : {
+		"name":"Jay's letter",
+		"image":"img/Note.png"
+	},
+	"yard" : {
+		"name":"backyard",
+		"image":"img/yard.png"
+	},
+	"blueprint" : {
+		"name":"Blueprint",
+		"image":"img/Blueprint.png"
+	},
+	"key" : {
+		"name":"Keys",
+		"image":"img/key.png"
+	},
+	"notekey" : {
+		"name":"Note and Key",
+		"image":"img/ComparisonVer2.png"
+	},
+	"police":{
+		"name":"Calling Police",
+		"image":"img/911_Line.png"
 	}
 }
