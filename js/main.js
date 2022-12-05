@@ -1,23 +1,12 @@
-function init_async()
+//Initializes the game in a local/offline environment
+//This assumes that data/processed-data.js has been generated, using the build.bat script
+//It also requires the data to be rebuilt everytime a change is made in the characters, places or story files.
+function init_local()
 {
-	$.getJSON("data/characters.json", function(jsonCharacters) {
-		characters = jsonCharacters;
-		initCharacters();
-
-		$.getJSON("data/places.json", function(jsonPlaces) {
-
-			places = jsonPlaces;
-			$.getJSON("data/story.json", function(jsonStory) {
-
-				story = jsonStory;
-				parseStory();
-				onInit();
-			});
-		});
-	});
+	initCharacters();
+	parseStory();
+	onInit();
 }
-
-//Initialize the character data after the data has been loaded
 function initCharacters()
 {
 	for(var c in characters)
@@ -34,4 +23,5 @@ function onInit()
 	displayScene("start");
 }
 
-init_async();
+/
+init_local();
