@@ -1,133 +1,26 @@
-[
+//Initializes the game in a local/offline environment
+//This assumes that data/processed-data.js has been generated, using the build.bat script
+//It also requires the data to be rebuilt everytime a change is made in the characters, places or story files.
+function init_local()
+{
+	initCharacters();
+	parseStory();
+	onInit();
+}
+//Initialize the character data after the data has been loaded
+function initCharacters()
+{
+	for(var c in characters)
 	{
-		"title": "Start",
-		"tags": "",
-		"body":"<<place town>>\nCray Island is a small oceanside town off the coast of New York. You have come to this town to visit your brother, Jay, who moved here 5 years ago.\n{{jennifer}}Geez! That ferry ride made my stomach churn inside.\n{{jennifer}}This town is still stunning though!\n{{jennifer}}<i>Jay and I were pretty different.</i>\n{{jennnifer}}<i>I preferred the city while he wanted to settle down somewhere and build his own beach house.</i>\n{{jennifer}}<i>A week ago, Jay called and invited me to visit him here in Cray Island, saying he had something to show me.</i>\n{{jennifer}}Now, let me see. Where is Jay?\n~dials Jay~\n{{jennifer}}Hmmm...he's not picking up. Maybe I should go to his house[[Go to Jay's house.|arrive_at_house]]",
-
-		"position": {
-			"x": 615,
-			"y": 109
-		},
-		"colorID": 0
-	},
-	{
-		"title": "arrive_at_house",
-		"tags": "",
-		"body": "<<place house>>\n{{jennifer}} <i>~Rings door...no one answered~</i>\n {{jennifer}} Hmm...No one is answering.\n<i> You take a look at the door and notice that it is slightly opened. </i> {{jennifer}} <i> This is weird.</i>\n<i> You open the door and slowly make your way inside hesitantly. </i>\n<<place kitchen>>\n{{jennifer}}Jay?? Are you home?\n <i> You stop in your tracks and look at the floor in front of you</i> \nThere are papers spread out everywhere.\n{{jennifer}}<i> Slowly, I looked at the sight in front of me...and there in the kitchen...</i>\n{{jennifer}}<i> Jay laid lifeless on the ground with a paper in his hand..</i>\n{{jennifer, upset}} Jay? Jay?? No, this can't be![[Call the cops.|cops_come]]",
-		"position": {
-			"x": 928,
-			"y": 324
-		},
-		"colorID": 0
-	},
-	{
-		"title": "cops_come",
-		"tags": "",
-		"body": "~Few hours later~\n{{jennifer}}Were you able to find anything?\n{{cop}}No, miss. We couldn't find anything that could lead to this being a possible murder. But we found this note lying in his pocket.\n [[{{Jennifer}} Read the note|read_note]]",
-		"position": {
-			"x": 615,
-			"y": 540
-		},
-		"colorID": 0
-	},
-	{
-		"title": "read_note",
-		"tags": "",
-		"body": "<<place Note>>\n{{jennifer, upset}} No. This can't be. Jay wouldn't leave like this. It can't be a suicide.\n<<place Kitchen>>{{cop}} I'm sorry miss, but it looks like he strangled himself and there is not much showing that he was murdered. Good day.\n<i> The cop leaves while you stay still in the kitchen. You look at the table where the cop has left you the piece of paper Jay was holding when you found him.</i>/n[[{{jennifer}} Check the paper that was in his hand.|check_paper]]\n[[{{jennifer}} Walk around for clues|look_clues]]",
-		"position": {
-			"x": 856,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-		"title": "check_paper",
-		"tags": "",
-		"body": "\nYou look at the paper and see that it's a blueprint of the beach house Jay wanted to build. \n<<place apartment>>\n<i>~Flashback to a younger Jay's conversation~</i>\n{{jay}} When I grow older, I want to build my own beach house, and we will play in it together!\n {{jennifer}} <i> Tears ran down my face as I recalled a memory of Jay </i>\n[[{{jennifer}}Walk around for clues|look_clues]]",
-		"position": {
-			"x": 374,
-			"y": 890
-		},
-		"colorID": 0
-	},
-	{
-		"title": "look_clues",
-		"tags": "",
-		"body": "<<place kitchen>>\n{{jennifer, upset}} Who did this to you? \n<i> You look around the house, searching for clues when suddenlyyou hear a sound coming from the backyard.</i> \n{{jennifer}} <i>I took a look outside and found a ripped, yellow scarf. The same one Jay got for his girlfriend, Sarah. </i>\n{{jennifer}} No way...[[{{jennifer}}Call Sarah|call_sarah]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-		"title": "call_sarah",
-		"tags": "",
-		"body": "<<place call>>\n{{sarah}}Hi, what's up! Did you get to the island safely? I heard from Jay that you were coming.\n{{jenn}}Sarah...Why?\n{{sarah}}Huh? Are you crying? Is something wrong?\n[[{{jenn}} Did you do it? Did you kill him?|ask_sarah]]",
-		"position": {
-			"x": 606,
-			"y": 1272
-		},
-		"colorID": 0
-	},
-	{
-		"title": "examine_house",
-		"tags": "",
-		"body": "<<place kitchen>>\n<i>You walk around the kitchen and notice something under the fridge.</i>\n{{jennifer}}Why would his keys be here?\n<i>You pick up the keys and examine them.</i>\n<i>One of the keys has an engraving that says WILSONS</i>\n<i>and a handwritten tag that says: WORK SMARTER, NOT HARDER</i>\n{{jennifer}} Isn't this the same name as Luke's store? Strange...\n[[{{jennifer}}Go to Wilson's|go_wilson]]",
-		"position": {
-			"x": 1210,
-			"y": 1279
-		},
-		"colorID": 0
-	},
-	{
-		"title": "ask_sarah",
-		"tags": "",
-		"body": "<<place call>>\n{{sarah}} I really don't understand. Are you okay? Where are you?\n{{jenn}} JAY! Jay is dead, Sarah. And I found your scarf here.\n<i> -silence-</i>\n{{sarah}} Stop playing around..April Fools was two months ago.\n{{jenn}} Stop lying! I know you did it.\n{{sarah}} I would never! You know how much Jay and I love each other!\n{{sarah}}We were even planning on building his beach house together!\n{{jenn}} You're lying! He left a note saying that you guys broke up.\n {{jenn}} Just leave him alone if you guys broke up! Why would you kill him!\n{{sarah}} What are you saying...We never broke up.\n{{jenn}} What? His note says that you left him because of a fight.\n{{sarah}} I don't know what note you are talking about, but I would never leave him. I didn't even know he was dead!\n{{jenn}}Then, why did I find your scarf laying around? It seems ripped as well.\n{{sarah}} What? If you're talking about my yellow scarf, I gave that to Luke last week.\n{{sarah}} He wanted to borrow more money to gamble.\n{{sarah}} I had to give it to him because he wouldn't stop pressuring Jay to give him money.\n{{jenn}} Luke gambles?\n{{sarah}}Yeah...It's hard for Jay to say no.\n{{sarah}}For the past couple of years, Jay's been lending him money.\n{{sarah}} Although, Jay told me yesterday that he firmly told Luke he won't give him any more money.\n{{jenn}} <i> This is strange. I need to call Luke.</i>\n[[{{jenn}}Call Luke|call_luke]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-	"title": "call_luke",
-		"tags": "",
-		"body": "<<place call>>\n{{Luke}}Hello? Jen?\n{{jennifer}}Hey Luke! How are you?\n{{Luke}} The usual - just watching over the store.\n{{jennifer}}Oh...Is it busy?\n{{luke}}Yeah, pretty busy! I'll have to call you back later.\n{{jennifer}}I see...\n<i>Call ends</i>\n[[{{jennifer}}Look around the house for clues.|examine_house]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-	"title": "go_wilson",
-		"tags": "",
-		"body": "<<place grocery>>\n{{jennifer}}It's closed...with no annoucement on the door either.\n[[{{jennifer}}Go back to Jay's house|back_house]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-	"title": "back_house",
-		"tags": "",
-		"body": "<<place House>>\n<i>You take a look again at Jay's suicide note.</i>\n{{jennifer}}Now that I look at it again...This isn't Jay's handwriting.\n{{jennifer}}This handwriting looks familiar though...\n{{jennifer}}<i>I looked at the handwriting on the tag from Luke's keys and place it next to the note.<i>\n{{jennifer}}The handwriting is the same! Interesting...\nDecide your final choice.\n[[{{jennifer}}Choose Luke as the suspect.|end]]\n[[{{jennifer}}Consider it a suicide|dead_end]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
-	},
-	{
-	"title": "dead_end",
-		"tags": "",
-		"body": "<<place screen>>\nYou lost! The one who killed Jay was Luke!!\n[[End game|end]]",
-		"position": {
-			"x": 611,
-			"y": 887
-		},
-		"colorID": 0
+		//Set a default approval level for all characters
+		characters[c].approval = 0;
 	}
-]
+}
+
+//Called when the game is fully initialized
+function onInit()
+{
+	//Only one thing left to do: start the game on the first Scene \o/ Here we go~
+	displayScene("start");
+}
+init_local();
