@@ -33,7 +33,7 @@
 	{
 		"title": "read_note",
 		"tags": "",
-		"body": "<<place Note>>\n{{jennifer, upset}} No. This can't be. Jay wouldn't leave like this. It can't be a suicide.\n<<place Kitchen>>{{cop}} I'm sorry miss, but it looks like he strangled himself and there is not much showing that he was murdered. Good day.\n<i> The cop leaves while you stay still in the kitchen. You look at the table where the cop has left you the piece of paper Jay was holding when you found him.</i>/n[[{{jennifer}} Check the paper that was in his hand.|check_paper]]\n[[{{jennifer}} Walk around for clues|look_clues]]",
+		"body": "<<place house>>\n{{jennifer, upset}} No. This can't be. Jay wouldn't leave like this. It can't be a suicide.\n<<place Kitchen>>{{cop}} I'm sorry miss, but it looks like he strangled himself and there is not much showing that he was murdered. Good day.\n<i> The cop leaves while you stay still in the kitchen. You look at the table where the cop has left you the piece of paper Jay was holding when you found him.</i>/n[[{{jennifer}} Check the paper that was in his hand.|check_paper]]\n[[{{jennifer}} Walk around for clues|look_clues]]",
 		"position": {
 			"x": 856,
 			"y": 887
