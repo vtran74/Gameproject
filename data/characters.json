@@ -1,42 +1,45 @@
 {
-  "jennifer":{
+  "default":{
     "poses":{
-      "default":"img/VN_chara001_neutral.png",
-      "upset":"img/VN_chara001_happy.png"
     },
     "name":"Jennifer"
   },
   "sarah":{
     "poses":{
+      "default":"img/Sarah_Default.png",
+      "happy":"img/Sarah_Happy.png",
+      "mad":"img/Sarah_Mad.png",
+      "shocked":"img/Sarah_Shocked.png",
+      "upset":"img/Sarah_Upset.png",
+      "confused":"img/Sarah_confused.png"
     },
     "name":"Sarah"
   },
 
   "luke":{
     "poses":{
+      "default":"img/Luke_Default.png",
+      "upset":"img/Luke_Upset.png",
+      "happy":"img/Luke_Happy.png"
     },
     "name":"Luke"
   },
   
   "cop":{
     "poses":{
+      "default":"img/PoliceDefault.png"
     },
     "name":"Cray Cop"
   },
   
-  "default":{
+  "narrator":{
     "poses":{
   },
-  "name":"Narration"
+  "name":"Narrator"
   },
   "jay":{
     "poses":{
   },
   "name":"Jay"
-  },
-  "jenn":{
-    "poses":{
-  },
-  "name":"Jennifer"
   }
 }
