@@ -8,24 +8,20 @@
 	background-repeat:no-repeat;
 }
 
-#container[character="jennifer"] .character
+#container[character="cop"] .character
 {
-	left:100px;
+	left:25px;
 }
 #container[character="sarah"] .character
 {
-	right:100px;
+	left:100px;
 }
 #container[character="luke"] .character
 {
-	right:100px;
+	left:100px;
 }
 
 #container[character="jennifer"] #characterName
-{
-	color:rgb(187, 128, 221);
-}
-#container[character="jenn"] #characterName
 {
 	color:rgb(187, 128, 221);
 }
