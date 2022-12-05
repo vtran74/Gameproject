@@ -11,21 +11,17 @@
 		"name":"Jay's kitchen",
 		"image":"img/kitchen.png" 
 	},
-	"livingRoom" : {
-		"name":"Jay's living room",
-		"image":"img/Livingroom.png"
-	},
 	"grocery" : {
 		"name":"Wilson's",
-		"image":"img/store.png"
+		"image":"img/street.png"
 	}, 
 	"apartment" : {
 		"name":"Flashback",
-		"image":"img/apartment.png"
+		"image":"img/ocean.png"
 	},
 	"call" : {
 		"name": "Phone",
-		"image":"img/apartment.png"
+		"image":"img/ocean.png"
 	},
 	"screen" : {
 		"name": "Wrong choice",
