@@ -1,27 +1,12 @@
-//Initializes the game in a server environment
-//Doesn't rely on the data/processed-data.js file, and asynchronously loads the .json files instead
-//A server environment (or a local *AMP stack, node, python microserver...) is required for the $.getJSON calls to work
-//Except if your browser is particularly chill, in which case, maybe it works okay?
-//I don't know, mine isn't.
-function init_async()
+//Initializes the game in a local/offline environment
+//This assumes that data/processed-data.js has been generated, using the build.bat script
+//It also requires the data to be rebuilt everytime a change is made in the characters, places or story files.
+function init_local()
 {
-	$.getJSON("data/characters.json", function(jsonCharacters) {
-		characters = jsonCharacters;
-		initCharacters();
-
-		$.getJSON("data/places.json", function(jsonPlaces) {
-
-			places = jsonPlaces;
-			$.getJSON("data/story.json", function(jsonStory) {
-
-				story = jsonStory;
-				parseStory();
-				onInit();
-			});
-		});
-	});
+	initCharacters();
+	parseStory();
+	onInit();
 }
-
 //Initialize the character data after the data has been loaded
 function initCharacters()
 {
@@ -51,5 +36,4 @@ function onInit()
 //- Do not start the game by double clicking the html files, use your server path instead;
 //- Comment init_local() and uncomment init_async(), and you're done :)
 
-
-init_async();
+init_local();
